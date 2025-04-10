@@ -1,0 +1,450 @@
+.home {
+  padding: 2rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.home::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    linear-gradient(45deg, transparent 48%, var(--primary-color) 49%, transparent 51%),
+    linear-gradient(-45deg, transparent 48%, var(--secondary-color) 49%, transparent 51%);
+  background-size: 60px 60px;
+  opacity: 0.05;
+  pointer-events: none;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color: var(--bg-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    linear-gradient(45deg, transparent 48%, rgba(255, 42, 109, 0.1) 49%, transparent 51%),
+    linear-gradient(-45deg, transparent 48%, rgba(5, 217, 232, 0.1) 49%, transparent 51%);
+  background-size: 60px 60px;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.hero-content {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-text {
+  flex: 1;
+  text-align: center;
+  max-width: 700px;
+}
+
+.hero-image {
+  position: absolute;
+  right: -100px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 400px;
+  height: 400px;
+  z-index: -1;
+}
+
+.image-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: var(--glow-primary);
+  border: 3px solid var(--primary-color);
+  opacity: 0.8;
+}
+
+.profile-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(30%) contrast(120%);
+  transition: all 0.3s ease;
+}
+
+.image-container::before {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border: 3px solid var(--secondary-color);
+  border-radius: 50%;
+  opacity: 0.5;
+}
+
+.image-container::after {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border: 2px solid var(--tertiary-color);
+  border-radius: 50%;
+  opacity: 0.3;
+}
+
+.hero-title {
+  font-size: 4.5rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: var(--glow-primary);
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 2px;
+  line-height: 1.2;
+}
+
+.hero-subtitle {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 1px;
+}
+
+.hero-description {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  color: var(--text-color);
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1rem;
+}
+
+.btn.primary {
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+  box-shadow: var(--glow-primary);
+}
+
+.btn.secondary {
+  background-color: transparent;
+  border: 2px solid var(--secondary-color);
+  color: var(--secondary-color);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--glow-primary);
+}
+
+.social-links {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.social-links a {
+  color: var(--text-color);
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.social-links a:hover {
+  color: var(--primary-color);
+  transform: translateY(-3px);
+  box-shadow: var(--glow-primary);
+}
+
+/* Achievements Section */
+.achievements {
+  padding: 6rem 2rem;
+  background-color: var(--bg-color);
+  position: relative;
+}
+
+.section-title {
+  font-size: 3rem;
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 4rem;
+  font-family: 'Orbitron', sans-serif;
+  text-shadow: var(--glow-primary);
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.achievement-card {
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  border: 1px solid var(--border-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.achievement-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, 
+    transparent 0%, 
+    rgba(255, 42, 109, 0.1) 50%, 
+    transparent 100%);
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+.achievement-card:hover::before {
+  transform: translateX(100%);
+}
+
+.achievement-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary-color);
+  box-shadow: var(--glow-primary);
+}
+
+.achievement-card h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.achievement-card p {
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+.achievement-card .date {
+  color: var(--secondary-color);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* Timeline Section */
+.timeline-section {
+  padding: 4rem 0;
+  position: relative;
+}
+
+.timeline-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: var(--primary-color);
+  font-family: 'Orbitron', sans-serif;
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom, 
+    var(--primary-color), 
+    var(--secondary-color), 
+    var(--tertiary-color));
+  box-shadow: var(--glow-primary);
+}
+
+.timeline-year {
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.year-marker {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  color: var(--bg-color);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+  box-shadow: var(--glow-primary);
+  font-family: 'Orbitron', sans-serif;
+}
+
+.events {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.event {
+  background-color: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 10px;
+  width: 45%;
+  position: relative;
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.event:hover {
+  border-color: var(--primary-color);
+  box-shadow: var(--glow-primary);
+}
+
+.event:nth-child(odd) {
+  align-self: flex-start;
+  margin-left: 5%;
+}
+
+.event:nth-child(even) {
+  align-self: flex-end;
+  margin-right: 5%;
+}
+
+.event h3 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.event .company {
+  color: var(--secondary-color);
+  opacity: 0.8;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.event p {
+  color: var(--text-color);
+}
+
+@media (max-width: 1200px) {
+  .hero-image {
+    right: -50px;
+    width: 350px;
+    height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .hero-text {
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  .hero-image {
+    position: relative;
+    right: 0;
+    top: 0;
+    transform: none;
+    width: 250px;
+    height: 250px;
+    margin: 2rem auto;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .hero-subtitle {
+    font-size: 2rem;
+  }
+
+  .hero-description {
+    font-size: 1.1rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0 2rem;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .timeline::before {
+    left: 30px;
+  }
+
+  .year-marker {
+    left: 30px;
+    transform: none;
+  }
+
+  .event {
+    width: 80%;
+    margin-left: 60px !important;
+  }
+
+  .event:nth-child(odd),
+  .event:nth-child(even) {
+    align-self: flex-start;
+  }
+}
