@@ -105,7 +105,7 @@ const Home = () => {
         <div className="hero-content">
           <div className="hero-text">
             <h1 className="hero-title">
-              Hi, I'm <span className="highlight">Your Name</span>
+              Hi, I'm <span className="highlight">Amit Prajapati</span>
             </h1>
             <h2 className="hero-subtitle">
               I'm a <span className="typing-text"></span>
@@ -115,10 +115,16 @@ const Home = () => {
               experience and clean code.
             </p>
             <div className="hero-buttons">
-              <a href="#projects" className="btn primary">
+              <a
+                href="https://amit-five.vercel.app/projects"
+                className="btn primary"
+              >
                 View My Work
               </a>
-              <a href="#contact" className="btn secondary">
+              <a
+                href="https://amit-five.vercel.app/contact"
+                className="btn secondary"
+              >
                 Contact Me
               </a>
             </div>
