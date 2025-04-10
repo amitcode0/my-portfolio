@@ -149,7 +149,7 @@ const Home = () => {
           <div className="hero-image">
             <div className="image-container">
               <img
-                src="/profile-photo.jpg"
+                src={require("../assets/1.jpg")}
                 alt="Your Name - Developer"
                 className="profile-photo"
               />
