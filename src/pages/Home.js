@@ -4,7 +4,7 @@ import "../styles/Home.css";
 const Home = () => {
   useEffect(() => {
     const text = document.querySelector(".typing-text");
-    const words = ["Developer", "Designer", "Creator"];
+    const words = ["Developer", "Data Analysis", "Cybersecurity Enthusiast"];
     let wordIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
