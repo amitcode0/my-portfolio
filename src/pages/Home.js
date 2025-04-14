@@ -130,14 +130,14 @@ const Home = () => {
             </div>
             <div className="social-links">
               <a
-                href="https://github.com"
+                href="https://github.com/amitcode0"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <i className="fab fa-github"></i>
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/amit-prajapati-06249b257/"
                 target="_blank"
                 rel="noopener noreferrer"
               >

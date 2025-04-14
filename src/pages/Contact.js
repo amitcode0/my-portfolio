@@ -38,15 +38,15 @@ const Contact = () => {
             <div className="contact-details">
               <div className="contact-item">
                 <i className="fas fa-envelope"></i>
-                <span>your.email@example.com</span>
+                <span>pamitak47@gmai.com</span>
               </div>
               <div className="contact-item">
                 <i className="fas fa-phone"></i>
-                <span>+1 234 567 890</span>
+                <span>9987253584</span>
               </div>
               <div className="contact-item">
                 <i className="fas fa-map-marker-alt"></i>
-                <span>Your Location</span>
+                <span>Nagpur, Maharashtra</span>
               </div>
             </div>
             <div className="social-links">

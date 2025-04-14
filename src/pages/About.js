@@ -3,27 +3,39 @@ import "../styles/About.css";
 
 const About = () => {
   const skills = [
-    { name: "HTML5", level: 90 },
-    { name: "CSS3", level: 85 },
-    { name: "JavaScript", level: 80 },
-    { name: "React", level: 75 },
+    {
+      name: "Programming Languages:C++, Python (NumPy, Pandas, Matplotlib, SciPy, Scikit-learn)",
+    },
+    { name: "Frontend Development:HTML, CSS, JavaScript, React.js" },
+    { name: "Backend Development: PHP (Basic), MySQL        " },
+    {
+      name: "Additional Skills: Data Analysis, Visualization, Cybersecurity",
+    },
     { name: "Node.js", level: 70 },
     { name: "MongoDB", level: 65 },
   ];
 
   const experiences = [
     {
-      title: "Frontend Developer",
-      company: "Tech Company",
-      period: "2020 - Present",
+      title: "cybersecurity",
+      company: "Phoenix Cybersecurity Form",
+      period: "2024 - Present",
       description:
-        "Developing and maintaining web applications using React and modern JavaScript.",
+        "Focused on mobile security, contributing to app and web interface enhancements.Collaborated with teams to ensure security and design compliance for mobile applications.",
+    },
+    {
+      title: "Data Analysis",
+      company: "",
+      period: "",
+      description:
+        "As a data analyst, I specialize in collecting, cleaning, transforming, and interpreting data to uncover valuable insights and support informed decision-making.",
     },
     {
       title: "Web Developer",
-      company: "Digital Agency",
-      period: "2018 - 2020",
-      description: "Created responsive websites and implemented UI/UX designs.",
+      company: "",
+      period: "",
+      description:
+        "As a web developer, I design and build responsive, user-friendly websites.",
     },
   ];
 
@@ -34,17 +46,19 @@ const About = () => {
         <div className="about-content">
           <div className="about-text">
             <p>
-              I'm a passionate web developer with a strong focus on creating
-              exceptional digital experiences. My journey in web development
-              started with a curiosity about how things work on the internet,
-              and that curiosity has grown into a deep passion for building
-              beautiful, functional, and user-friendly applications.
+              I’m a Web Designer and Developer with a strong background in data
+              science and cybersecurity. I enjoy building modern, responsive
+              websites that are both beautiful and easy to use. My focus is on
+              writing clean code, creating smooth user experiences, and making
+              sure everything works well on all devices.
             </p>
             <p>
-              I specialize in building modern web applications using React and
-              JavaScript, with a strong emphasis on clean code, performance, and
-              accessibility. I'm always eager to learn new technologies and
-              techniques to improve my skills and create better products.
+              Along with design and development, I’m passionate about learning
+              new technologies and improving my skills. I’ve worked on several
+              projects where I’ve collaborated with different teams to solve
+              real-world problems. Whether it's designing a user-friendly
+              interface or improving a site’s performance, I always aim to
+              create something meaningful and impactful.
             </p>
           </div>
           <div className="skills">
@@ -54,7 +68,7 @@ const About = () => {
                 <div key={skill.name} className="skill-item">
                   <div className="skill-info">
                     <span className="skill-name">{skill.name}</span>
-                    <span className="skill-level">{skill.level}%</span>
+                    <span className="skill-level">{skill.level}:)</span>
                   </div>
                   <div className="skill-bar">
                     <div
