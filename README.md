@@ -4,5 +4,5 @@ Welcome to **my-portfolio**, a modern and fully responsive personal portfolio we
 
 ##  Live Demo
 
-🔗 [[View Portfolio Live](#) &nbsp; *((https://amitcode0.vercel.app))*
+🔗 [[View Portfolio Live](#) &nbsp; *(https://amitcode0.vercel.app)*
 
