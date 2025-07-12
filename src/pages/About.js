@@ -11,8 +11,8 @@ const About = () => {
     {
       name: "Additional Skills: Data Analysis, Visualization, Cybersecurity",
     },
-    { name: "Node.js", level: 70 },
-    { name: "MongoDB", level: 65 },
+    { name: "Node.js", level: "" },
+    { name: "MongoDB", level: "" },
   ];
 
   const experiences = [
@@ -21,14 +21,14 @@ const About = () => {
       company: "Phoenix Cybersecurity Form",
       period: "2024 - Present",
       description:
-        "Focused on mobile security, contributing to app and web interface enhancements.Collaborated with teams to ensure security and design compliance for mobile applications.",
+        "Focused on mobile security,Conducted a hands-on session on Android Exploitation as part of a cybersecurity workshop.Delivered practical demonstrations of real-world Android vulnerabilities and exploitation techniques.Engaged over 100+ participants, guiding them through reverse engineering, APK analysis, and defense strategies.Represented with Phoenix-Cybersecurity to promote awareness of Android app security.",
     },
     {
       title: "Data Analysis",
       company: "",
       period: "",
       description:
-        "As a data analyst, I specialize in collecting, cleaning, transforming, and interpreting data to uncover valuable insights and support informed decision-making.",
+        "As a Data Analyst, I specialize in collecting, cleaning, transforming, and interpreting data to uncover valuable insights and support informed decision-making.I also served as a Coordinator for the “PromptCraft” event, where I led planning and execution, fostering innovation in prompt engineering.Additionally, I developed a Car Price Prediction Model, leveraging machine learning to accurately estimate vehicle prices based on key features and trends in the dataset.",
     },
     {
       title: "Web Developer",
@@ -46,19 +46,25 @@ const About = () => {
         <div className="about-content">
           <div className="about-text">
             <p>
-              I’m a Web Designer and Developer with a strong background in data
-              science and cybersecurity. I enjoy building modern, responsive
-              websites that are both beautiful and easy to use. My focus is on
-              writing clean code, creating smooth user experiences, and making
-              sure everything works well on all devices.
+              Hi! I’m a Data Analyst with a deep interest in AI/ML,
+              cybersecurity, and web development. I enjoy working with data —
+              from analyzing trends and building predictive models to creating
+              dashboards that turn raw information into meaningful insights. At
+              the same time, I love building modern, responsive websites that
+              are fast, clean, and user-friendly. I also pay close attention to
+              security, making sure everything I create follows cybersecurity
+              best practices.
             </p>
             <p>
-              Along with design and development, I’m passionate about learning
-              new technologies and improving my skills. I’ve worked on several
-              projects where I’ve collaborated with different teams to solve
-              real-world problems. Whether it's designing a user-friendly
-              interface or improving a site’s performance, I always aim to
-              create something meaningful and impactful.
+              Some of my recent projects include a Phishing Link Detection
+              Model, which classifies URLs as malicious or legitimate to help
+              protect users online, and a Car Price Prediction Model that uses
+              machine learning to estimate vehicle prices based on various
+              features like brand, year, mileage, and fuel type. I’m always
+              exploring new tools and technologies to improve my skills and stay
+              ahead. Whether it’s related to data, design, development, or
+              security — I’m always ready to learn, build, and solve real-world
+              problems
             </p>
           </div>
           <div className="skills">
