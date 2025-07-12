@@ -49,9 +49,10 @@ const Home = () => {
       date: "2022-Present",
     },
     {
-      title: "Tech Conference Speaker",
-      description: "Spoke at ReactConf 2023 about modern web development",
-      date: "2023",
+      title: "Android Security Workshop Speaker",
+      description:
+        "Conducted a hands-on session on Android Exploitation at TECHNEX SVPCET under Encipher-X, in collaboration with Phoenix-Cybersecurity.",
+      date: "2025",
     },
   ];
 
@@ -169,13 +170,40 @@ const Home = () => {
       <section className="achievements">
         <h2 className="section-title">Achievements</h2>
         <div className="achievements-grid">
-          {achievements.map((achievement, index) => (
-            <div key={index} className="achievement-card">
-              <h3>{achievement.title}</h3>
-              <p>{achievement.description}</p>
-              <span className="date">{achievement.date}</span>
-            </div>
-          ))}
+          {achievements.map((achievement, index) => {
+            // Add link only to the HICAThon 1.0 – CTF card and Android Security Workshop Speaker card
+            const isHicathon = achievement.title === "HICAThon 1.0 – CTF";
+            const isAndroidWorkshop =
+              achievement.title === "Android Security Workshop Speaker";
+            let link = null;
+            if (isHicathon) {
+              link =
+                "https://www.linkedin.com/posts/phoenix-cybersec_phoenixcybersec-hicathon2025-capturetheflag-activity-7311460837901176833-5TjJ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD9BA4oBGeRelIBFUW_TE7CaPURYi16pZDY";
+            } else if (isAndroidWorkshop) {
+              link =
+                "https://www.linkedin.com/posts/amitprajapaticode0_cybersecurity-androidexploitation-encipherx-activity-7290025823007395840-JRuR?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD9BA4oBGeRelIBFUW_TE7CaPURYi16pZDY";
+            }
+            const cardContent = (
+              <div key={index} className="achievement-card">
+                <h3>{achievement.title}</h3>
+                <p>{achievement.description}</p>
+                <span className="date">{achievement.date}</span>
+              </div>
+            );
+            return link ? (
+              <a
+                key={index}
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                {cardContent}
+              </a>
+            ) : (
+              cardContent
+            );
+          })}
         </div>
       </section>
 
