@@ -4,7 +4,7 @@ import "../styles/Home.css";
 const Home = () => {
   useEffect(() => {
     const text = document.querySelector(".typing-text");
-    const words = ["Developer", "Data Analysis", "Cybersecurity Enthusiast"];
+    const words = ["Developer", "Data Analyst", "Cybersecurity Enthusiast"];
     let wordIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
@@ -38,9 +38,10 @@ const Home = () => {
 
   const achievements = [
     {
-      title: "Hackathon Winner",
-      description: "Won first place in the CodeFest 2023 hackathon",
-      date: "2023",
+      title: "HICAThon 1.0 – CTF",
+      description:
+        "Participated in the Capture The Flag (CTF) competition at HICAThon 1.0 as a dedicated member of Team ENCIPHERX. ",
+      date: "25th–26th March 2025",
     },
     {
       title: "Open Source Contributor",
@@ -111,18 +112,19 @@ const Home = () => {
               I'm a <span className="typing-text"></span>
             </h2>
             <p className="hero-description">
-              I create beautiful and functional websites with a focus on user
-              experience and clean code.
+              I’m a passionate Data Analyst, Developer, and Cybersecurity
+              Enthusiast with strong critical thinking and problem-solving
+              skills
             </p>
             <div className="hero-buttons">
               <a
-                href="https://amit-five.vercel.app/projects"
+                href="https://amitcode0.vercel.app/projects"
                 className="btn primary"
               >
                 View My Work
               </a>
               <a
-                href="https://amit-five.vercel.app/contact"
+                href="https://amitcode0.vercel.app/contact"
                 className="btn secondary"
               >
                 Contact Me
@@ -137,7 +139,7 @@ const Home = () => {
                 <i className="fab fa-github"></i>
               </a>
               <a
-                href="https://www.linkedin.com/in/amit-prajapati-06249b257/"
+                href="https://www.linkedin.com/in/amitprajapaticode0/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
