@@ -29,10 +29,10 @@ const Projects = () => {
     },
     {
       id: 3,
-      title: "Gym management system",
+      title: "Gym Management System",
       description:
         "A complete Gym Management System built with React.js for the frontend and MySQL as the database. This system allows gym owners or staff to manage gym members, track attendance, handle payments, and assign workout plans efficiently.",
-      image: "project3.jpg",
+      image: "/assets/gym.png",
       tags: ["React", "CSS", "JavaScript", "MySQL"],
       category: "web",
       github: "https://github.com",
