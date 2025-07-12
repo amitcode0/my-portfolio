@@ -62,9 +62,10 @@ const Home = () => {
       year: "2025",
       events: [
         {
-          title: "Android security",
+          title: "Domain: Android security / Media",
           company: "Phoenix-Cybersecurity",
-          description: "Leading frontend development team",
+          description:
+            "Creating CTF challenges, conducting workshops, and exploring new tools and techniques in cybersecurity.",
         },
         {
           title: "AWS Certification",
@@ -73,30 +74,35 @@ const Home = () => {
       ],
     },
     {
-      year: "2022",
+      year: "Cert",
       events: [
         {
-          title: "Software Engineer",
-          company: "WebDev Solutions",
-          description: "Full-stack development role",
+          title: "DeepLearning.AI Certification",
+
+          description:
+            "Supervised Machine Learning: Regression and Classification",
         },
         {
-          title: "AWS Certification",
-          description: "Earned AWS Solutions Architect certification",
+          title: "PromptCraft:Coordinator",
+          company: "PromptCraft: AI Masters Event",
+          description:
+            "Organized and led the event successfully Date:October 5, 2024",
         },
       ],
     },
     {
-      year: "2021",
+      year: "2024",
       events: [
-        {
-          title: "Junior Developer",
-          company: "StartUp Inc",
-          description: "Frontend development position",
-        },
         {
           title: "Graduation",
-          description: "Completed Bachelor's in Computer Science",
+          company: "SVPCET",
+          description:
+            "Bachelor of Technology (B.Tech) in Data Science [2022-2026]",
+        },
+        {
+          title: "B.Sc.(CS) Honours",
+          company: "Somaiya Vidyavihar University",
+          description: "2021-2022",
         },
       ],
     },
@@ -216,11 +222,15 @@ const Home = () => {
               <div className="year-marker">{yearData.year}</div>
               <div className="events">
                 {yearData.events.map((event, eventIndex) => {
-                  // Add link only to the AWS Certification event
+                  // Add link only to the AWS Certification and DeepLearning.AI Certification events
                   const isAwsCert =
                     event.title === "AWS Certification" &&
                     event.description ===
                       "Earned AWS Solutions Architect certification";
+                  const isDeepLearningCert =
+                    event.title === "DeepLearning.AI Certification" &&
+                    event.description ===
+                      "Supervised Machine Learning: Regression and Classification";
                   // Alternate left/right by event index
                   const eventSide = eventIndex % 2 === 0 ? "left" : "right";
                   const eventContent = (
@@ -232,19 +242,33 @@ const Home = () => {
                       <p>{event.description}</p>
                     </div>
                   );
-                  return isAwsCert ? (
-                    <a
-                      key={eventIndex}
-                      href="https://moonshot.scaler.com/s/li/2xe7LnYsdM"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      style={{ textDecoration: "none", color: "inherit" }}
-                    >
-                      {eventContent}
-                    </a>
-                  ) : (
-                    eventContent
-                  );
+                  if (isAwsCert) {
+                    return (
+                      <a
+                        key={eventIndex}
+                        href="https://moonshot.scaler.com/s/li/2xe7LnYsdM"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ textDecoration: "none", color: "inherit" }}
+                      >
+                        {eventContent}
+                      </a>
+                    );
+                  } else if (isDeepLearningCert) {
+                    return (
+                      <a
+                        key={eventIndex}
+                        href="https://www.coursera.org/account/accomplishments/certificate/HR49RFVCOKI4"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ textDecoration: "none", color: "inherit" }}
+                      >
+                        {eventContent}
+                      </a>
+                    );
+                  } else {
+                    return eventContent;
+                  }
                 })}
               </div>
             </div>
