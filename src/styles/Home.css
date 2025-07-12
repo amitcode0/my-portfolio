@@ -81,6 +81,12 @@
   box-shadow: var(--glow-primary);
   border: 3px solid var(--primary-color);
   opacity: 0.8;
+  transition: box-shadow 0.3s, border-color 0.3s;
+}
+
+.image-container:hover {
+  box-shadow: 0 0 30px 10px var(--primary-color), 0 0 40px 20px var(--secondary-color);
+  border-color: var(--secondary-color);
 }
 
 .profile-photo {
@@ -89,6 +95,7 @@
   object-fit: cover;
   filter: grayscale(30%) contrast(120%);
   transition: all 0.3s ease;
+  border-radius: 50%;
 }
 
 .image-container::before {
@@ -98,6 +105,7 @@
   border: 3px solid var(--secondary-color);
   border-radius: 50%;
   opacity: 0.5;
+  pointer-events: none;
 }
 
 .image-container::after {
@@ -107,6 +115,7 @@
   border: 2px solid var(--tertiary-color);
   border-radius: 50%;
   opacity: 0.3;
+  pointer-events: none;
 }
 
 .hero-title {
@@ -351,14 +360,22 @@
   box-shadow: var(--glow-primary);
 }
 
-.event:nth-child(odd) {
+.event.left {
   align-self: flex-start;
   margin-left: 5%;
 }
 
-.event:nth-child(even) {
+.event.right {
   align-self: flex-end;
   margin-right: 5%;
+}
+
+/* Remove nth-child alignment if present */
+.event:nth-child(odd),
+.event:nth-child(even) {
+  margin-left: 0;
+  margin-right: 0;
+  align-self: unset;
 }
 
 .event h3 {

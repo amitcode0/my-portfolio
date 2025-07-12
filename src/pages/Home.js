@@ -44,9 +44,10 @@ const Home = () => {
       date: "25th–26th March 2025",
     },
     {
-      title: "Open Source Contributor",
-      description: "Contributed to multiple open-source projects on GitHub",
-      date: "2022-Present",
+      title: "CTF Participant & Attendee – Hack The Box Meetup",
+      description:
+        "Participated in Hack The Box 2nd Meetup 2024 at Dream11 Technologies, BKC. Gained insights on privilege escalation, CTF strategies, and adversary emulation frameworks like CALDERA & MITRE.",
+      date: "2024",
     },
     {
       title: "Android Security Workshop Speaker",
@@ -58,16 +59,16 @@ const Home = () => {
 
   const timeline = [
     {
-      year: "2023",
+      year: "2025",
       events: [
         {
-          title: "Senior Software Engineer",
-          company: "TechCorp",
+          title: "Android security",
+          company: "Phoenix-Cybersecurity",
           description: "Leading frontend development team",
         },
         {
-          title: "React Advanced Course",
-          description: "Completed advanced React.js course",
+          title: "AWS Certification",
+          description: "Earned AWS Solutions Architect certification",
         },
       ],
     },
@@ -214,15 +215,37 @@ const Home = () => {
             <div key={index} className="timeline-year">
               <div className="year-marker">{yearData.year}</div>
               <div className="events">
-                {yearData.events.map((event, eventIndex) => (
-                  <div key={eventIndex} className="event">
-                    <h3>{event.title}</h3>
-                    {event.company && (
-                      <p className="company">{event.company}</p>
-                    )}
-                    <p>{event.description}</p>
-                  </div>
-                ))}
+                {yearData.events.map((event, eventIndex) => {
+                  // Add link only to the AWS Certification event
+                  const isAwsCert =
+                    event.title === "AWS Certification" &&
+                    event.description ===
+                      "Earned AWS Solutions Architect certification";
+                  // Alternate left/right by event index
+                  const eventSide = eventIndex % 2 === 0 ? "left" : "right";
+                  const eventContent = (
+                    <div key={eventIndex} className={`event ${eventSide}`}>
+                      <h3>{event.title}</h3>
+                      {event.company && (
+                        <p className="company">{event.company}</p>
+                      )}
+                      <p>{event.description}</p>
+                    </div>
+                  );
+                  return isAwsCert ? (
+                    <a
+                      key={eventIndex}
+                      href="https://moonshot.scaler.com/s/li/2xe7LnYsdM"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ textDecoration: "none", color: "inherit" }}
+                    >
+                      {eventContent}
+                    </a>
+                  ) : (
+                    eventContent
+                  );
+                })}
               </div>
             </div>
           ))}
