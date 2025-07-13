@@ -17,10 +17,24 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Add your form submission logic here
-    console.log("Form submitted:", formData);
+    try {
+      const response = await fetch("http://localhost:5000/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      const data = await response.json();
+      if (data.success) {
+        alert("Message sent!");
+        setFormData({ name: "", email: "", subject: "", message: "" });
+      } else {
+        alert("Failed to send message.");
+      }
+    } catch (err) {
+      alert("Error sending message.");
+    }
   };
 
   return (
