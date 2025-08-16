@@ -22,7 +22,7 @@ const Projects = () => {
       description:
         "A Python-based tool for analyzing Paytm UPI transaction statements, categorizing spending (e.g., food, travel, shopping), and visualizing monthly trends.",
       image: "/assets/paytm-upi-analyzer.png",
-      tags: ["Jupyter Notebook / JupyterLab", "Pandas", "Matplotlib", "NumPy"],
+      tags: ["Jupyter Notebook", "Pandas", "Matplotlib", "NumPy"],
       category: "web",
       github: "https://github.com/amitcode0/paytm-upi-analyzer",
       live: "https://github.com/amitcode0/paytm-upi-analyzer",
@@ -43,7 +43,10 @@ const Projects = () => {
   const filteredProjects =
     activeFilter === "all"
       ? projects
-      : projects.filter((project) => project.category === activeFilter);
+      : projects.filter(
+          (project) =>
+            project.category.toLowerCase() === activeFilter.toLowerCase()
+        );
 
   return (
     <section className="projects">
