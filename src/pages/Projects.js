@@ -10,18 +10,18 @@ const Projects = () => {
       title: "Android Reverse Shell",
       description:
         "Demonstrated creating a malicious APK with msfvenom and Metasploit to establish a reverse shell via Meterpreter, enabling remote control of Android devices for ethical hacking and penetration testing purposes.",
-      image: "/assets/Android Reverse Shell.jpg",
+      image: "/assets/android-reverse-shell.jpg", // ✅ fixed path (no spaces, lowercase)
       tags: ["msfvenom", "Metasploit", "Kali Linux"],
-      category: "Mobile",
+      category: "mobile",
       github: "https://github.com/amitcode0/Shadow-APK-CYBERSECURITY",
       live: "https://github.com/amitcode0/Shadow-APK-CYBERSECURITY",
     },
     {
       id: 2,
-      title: "Paytm upi analyzer",
+      title: "Paytm UPI Analyzer",
       description:
         "A Python-based tool for analyzing Paytm UPI transaction statements, categorizing spending (e.g., food, travel, shopping), and visualizing monthly trends.",
-      image: "/assets/Paytm upi analyzer.png",
+      image: "/assets/paytm-upi-analyzer.png", // ✅ fixed path
       tags: ["Jupyter Notebook / JupyterLab", "Pandas", "Matplotlib", "NumPy"],
       category: "web",
       github: "https://github.com/amitcode0/paytm-upi-analyzer",
@@ -32,7 +32,7 @@ const Projects = () => {
       title: "Gym Management System",
       description:
         "A complete Gym Management System built with React.js for the frontend and MySQL as the database. This system allows gym owners or staff to manage gym members, track attendance, handle payments, and assign workout plans efficiently.",
-      image: "/assets/gym.png",
+      image: "/assets/gym.png", // ✅ fine
       tags: ["React", "CSS", "JavaScript", "MySQL"],
       category: "web",
       github: "https://github.com",
