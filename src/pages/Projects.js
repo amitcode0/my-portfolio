@@ -10,19 +10,19 @@ const Projects = () => {
       title: "Android Reverse Shell",
       description:
         "Demonstrated creating a malicious APK with msfvenom and Metasploit to establish a reverse shell via Meterpreter, enabling remote control of Android devices for ethical hacking and penetration testing purposes.",
-      image: "/assets/android-reverse-shell.jpg",
+      image: "/assets/Android Reverse Shell.jpg",
       tags: ["msfvenom", "Metasploit", "Kali Linux"],
-      category: "mobile",
+      category: "Mobile",
       github: "https://github.com/amitcode0/Shadow-APK-CYBERSECURITY",
       live: "https://github.com/amitcode0/Shadow-APK-CYBERSECURITY",
     },
     {
       id: 2,
-      title: "Paytm UPI Analyzer",
+      title: "Paytm upi analyzer",
       description:
         "A Python-based tool for analyzing Paytm UPI transaction statements, categorizing spending (e.g., food, travel, shopping), and visualizing monthly trends.",
-      image: "/assets/paytm-upi-analyzer.png",
-      tags: ["Jupyter Notebook", "Pandas", "Matplotlib", "NumPy"],
+      image: "/assets/Paytm upi analyzer.png",
+      tags: ["Jupyter Notebook / JupyterLab", "Pandas", "Matplotlib", "NumPy"],
       category: "web",
       github: "https://github.com/amitcode0/paytm-upi-analyzer",
       live: "https://github.com/amitcode0/paytm-upi-analyzer",
@@ -43,10 +43,7 @@ const Projects = () => {
   const filteredProjects =
     activeFilter === "all"
       ? projects
-      : projects.filter(
-          (project) =>
-            project.category.toLowerCase() === activeFilter.toLowerCase()
-        );
+      : projects.filter((project) => project.category === activeFilter);
 
   return (
     <section className="projects">
