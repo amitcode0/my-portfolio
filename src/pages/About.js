@@ -31,7 +31,7 @@ const About = () => {
         "As a Data Analyst, I specialize in collecting, cleaning, transforming, and interpreting data to uncover valuable insights and support informed decision-making.I also served as a Coordinator for the “PromptCraft” event, where I led planning and execution, fostering innovation in prompt engineering.Additionally, I developed a Car Price Prediction Model, leveraging machine learning to accurately estimate vehicle prices based on key features and trends in the dataset.",
     },
     {
-      title: "Web Developer amitwa",
+      title: "Web Developer",
       company: "",
       period: "",
       description:
