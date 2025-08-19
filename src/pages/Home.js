@@ -125,14 +125,11 @@ const Home = () => {
               skills
             </p>
             <div className="hero-buttons">
-              <a
-                href="https://amitcode0.vercel.app/projects"
-                className="btn primary"
-              >
+              <a href="https://amitcode0.page/projects" className="btn primary">
                 View My Work
               </a>
               <a
-                href="https://amitcode0.vercel.app/contact"
+                href="https://amitcode0.page/contact"
                 className="btn secondary"
               >
                 Contact Me
