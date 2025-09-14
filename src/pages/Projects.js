@@ -4,7 +4,7 @@ import "../styles/Projects.css";
 // Import images (put images back in src/assets for this method)
 import androidShellImage from "../assets/android-reverse-shell.jpg";
 import paytmAnalyzerImage from "../assets/paytm-upi-analyzer.png";
-import gymImage from "../assets/gym.png";
+import carImage from "../assets/car.png";
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState("all");
@@ -34,14 +34,21 @@ const Projects = () => {
     },
     {
       id: 3,
-      title: "Gym Management System",
+      title: " Car Price Predictor",
       description:
-        "A complete Gym Management System built with React.js for the frontend and MySQL as the database. This system allows gym owners or staff to manage gym members, track attendance, handle payments, and assign workout plans efficiently.",
-      image: gymImage, // ✅ Use imported image
-      tags: ["React", "CSS", "JavaScript", "MySQL"],
+        "The Car Price Predictor is a web-based application that allows users to estimate the resale price of a car based on various attributes.",
+      image: carImage, // ✅ Use imported image
+      tags: [
+        "React",
+        "CSS",
+        "JavaScript",
+        "Machine Learning",
+        "Python",
+        "Scikit-learn",
+      ],
       category: "web",
-      github: "https://github.com",
-      live: "https://example.com",
+      github: "https://github.com/amitcode0/car-price-prediction-model",
+      live: "https://car-price-prediction-model-alpha.vercel.app",
     },
   ];
 
