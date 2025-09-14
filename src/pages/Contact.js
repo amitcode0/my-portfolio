@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../styles/Contact.css";
+import supabase from "../config/supabase";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -20,20 +21,35 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:5000/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
-      const data = await response.json();
-      if (data.success) {
-        alert("Message sent!");
-        setFormData({ name: "", email: "", subject: "", message: "" });
+      console.log("Attempting to submit form with data:", formData);
+
+      const { data, error } = await supabase.from("contact_messages").insert([
+        {
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          created_at: new Date().toISOString(),
+        },
+      ]);
+
+      console.log("Supabase response:", { data, error });
+
+      if (error) {
+        console.error("Supabase Error:", error);
+        alert(
+          `Failed to send message: ${error.message}. Please check the console for details.`
+        );
       } else {
-        alert("Failed to send message.");
+        console.log("Message sent successfully:", data);
+        alert("Message sent successfully!");
+        setFormData({ name: "", email: "", subject: "", message: "" });
       }
     } catch (err) {
-      alert("Error sending message.");
+      console.error("JavaScript Error:", err);
+      alert(
+        `Error sending message: ${err.message}. Please check the console for details.`
+      );
     }
   };
 
